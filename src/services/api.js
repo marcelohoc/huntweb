@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const username = 'usuario'
-const password = 'senha'
+const username = process.env.USER
+const password = process.env.PASSWD
 const token = Buffer.from(`${username}:${password}`, 'utf8').toString('base64')
 
 const api = axios.create( { 
